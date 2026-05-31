@@ -1,0 +1,2 @@
+# startupai
+Skills for Entrprenuers
