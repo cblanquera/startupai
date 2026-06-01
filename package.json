@@ -1,0 +1,26 @@
+{
+  "name": "startupai",
+  "version": "0.1.0",
+  "description": "Portable StartupAI skills for founder and investor workshop workflows.",
+  "bin": {
+    "startupai": "./bin/startupai.js"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "validate": "python3 scripts/validate-skills.py",
+    "version": "node bin/startupai.js version"
+  },
+  "files": [
+    "adapters/",
+    "bin/",
+    "docs/",
+    "scripts/",
+    "skills/",
+    "templates/",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "README.md",
+    "VERSION"
+  ],
+  "license": "UNLICENSED"
+}

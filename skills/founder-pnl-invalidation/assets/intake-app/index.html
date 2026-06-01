@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Founder P&L Invalidation Intake</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Founder P&L Invalidation</p>
+          <h1>Pressure-test the startup before building it</h1>
+        </div>
+        <div class="step-pill"><span id="stepNow">1</span>/<span id="stepTotal">5</span></div>
+      </header>
+
+      <section class="panel">
+        <form id="intakeForm">
+          <div class="step is-active" data-step="0">
+            <h2>Startup thesis</h2>
+            <label>
+              Startup idea
+              <textarea name="idea" required placeholder="A marketplace for independent fitness coaches to sell monthly training programs."></textarea>
+            </label>
+          </div>
+
+          <div class="step" data-step="1">
+            <h2>Founders and roles</h2>
+            <p class="hint">Add every founder who will work in the business. Fair monthly salary should be what the company would need to pay if it hired that role.</p>
+            <div class="row-list" data-collection="founders"></div>
+            <button type="button" class="add-row" data-add-row="founders">Add Row</button>
+          </div>
+
+          <div class="step" data-step="2">
+            <h2>Salary plan</h2>
+            <p class="hint">Add one row when a founder starts taking salary or increases take-home salary. The latest amount continues through the projection, and the unpaid portion becomes shareholder advance.</p>
+            <div class="row-list" data-collection="salaryPlan"></div>
+            <button type="button" class="add-row" data-add-row="salaryPlan">Add Row</button>
+          </div>
+
+          <div class="step" data-step="3">
+            <h2>Possible business models</h2>
+            <p class="hint">Describe each way this technology product could make money. Include who pays, what they pay for, how pricing works, billing frequency, the conservative adoption assumption, and the evidence or benchmark behind it. Add an example revenue ramp so the first workbook can show how revenue flows through the model.</p>
+            <div class="row-list" data-collection="revenueModels"></div>
+            <button type="button" class="add-row" data-add-row="revenueModels">Add another model</button>
+          </div>
+
+          <div class="step" data-step="4">
+            <h2>Operating expenses</h2>
+            <p class="hint">Add recurring and one-time non-founder expenses. Founder salaries are already calculated from the salary plan.</p>
+            <div class="row-list" data-collection="expenses"></div>
+            <button type="button" class="add-row" data-add-row="expenses">Add Row</button>
+          </div>
+
+          <div class="actions">
+            <button type="button" id="backBtn">Back</button>
+            <button type="button" id="nextBtn">Next</button>
+            <button type="submit" id="submitBtn" class="primary">Submit intake</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="result" class="result" hidden></section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
