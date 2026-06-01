@@ -100,6 +100,9 @@ node bin/startupai.js version
 Install skills into a supported local target:
 
 ```bash
+npx github:cblanquera/startupai#v0.1.0 install --target codex
+npx github:cblanquera/startupai#v0.1.0 install --target claude
+npx github:cblanquera/startupai#v0.1.0 install --target opencode
 node bin/startupai.js install --target codex
 node bin/startupai.js install --target claude
 node bin/startupai.js install --target opencode
@@ -204,6 +207,10 @@ advice, vague startup coaching, or unsupported market claims.
 When drafting or revising skills, do not assume the consumer is Codex only.
 Write portable skill guidance first, then add agent-specific notes only where
 the behavior actually differs.
+
+Prefer the `npx github:cblanquera/startupai#<version> install --target ...`
+flow for user-facing install guidance because it uses the Node CLI instead of
+Unix shell tools.
 
 When command guidance is necessary, prefer cross-platform commands and clearly
 state any macOS, Linux, Windows, Node, or browser assumptions. Do not hard-code

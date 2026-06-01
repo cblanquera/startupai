@@ -50,14 +50,22 @@ node skills/founder-pnl-invalidation/scripts/summarize_submission.mjs skills/fou
 
 ## Installing Skills
 
-Install the skills into a supported local agent target:
+Install directly from GitHub with `npx`:
+
+```bash
+npx github:cblanquera/startupai#v0.1.0 install --target codex
+npx github:cblanquera/startupai#v0.1.0 install --target claude
+npx github:cblanquera/startupai#v0.1.0 install --target opencode
+```
+
+Supported targets are `codex`, `claude`, and `opencode`. For local development,
+you can run the bundled CLI directly:
 
 ```bash
 node bin/startupai.js install --target codex
 ```
 
-Supported targets are `codex`, `claude`, and `opencode`. You can also install
-to an explicit directory:
+You can also install to an explicit directory:
 
 ```bash
 node bin/startupai.js install --dir /path/to/skills

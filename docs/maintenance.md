@@ -94,7 +94,12 @@ Use this sequence for a normal release:
 5. Update `VERSION`, `package.json`, and `CHANGELOG.md` together.
 6. Commit and push the release changes.
 7. Pre-test the pushed branch or `#main` install path when GitHub access is
-   available.
+   available:
+
+   ```bash
+   npx github:cblanquera/startupai#main install --dir /tmp/startupai-github-test
+   ```
+
 8. Create the version tag and GitHub release.
 9. Install the tagged release into the requested local agent target and verify
    unrelated installed skills and local overlays are preserved.
@@ -112,7 +117,16 @@ scripts/sync-opencode.sh
 Each sync script validates first, then replaces only the StartupAI skill folders
 in the target directory with copies from `skills/`.
 
-The same install flow is available through the dependency-free Node CLI:
+For users, prefer the GitHub `npx` installer because it uses the dependency-free
+Node CLI and does not require Unix shell tools:
+
+```bash
+npx github:cblanquera/startupai#v0.1.0 install --target codex
+npx github:cblanquera/startupai#v0.1.0 install --target claude
+npx github:cblanquera/startupai#v0.1.0 install --target opencode
+```
+
+The same install flow is available locally through the bundled CLI:
 
 ```bash
 node bin/startupai.js install --target codex

@@ -3,7 +3,13 @@
 Claude Code consumes StartupAI through portable skill folders copied from the
 repository root `skills/` directory.
 
-Install or sync:
+Install from GitHub:
+
+```bash
+npx github:cblanquera/startupai#v0.1.0 install --target claude
+```
+
+Or sync from a local checkout:
 
 ```bash
 scripts/sync-claude.sh
